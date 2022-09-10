@@ -20,12 +20,13 @@ final navigatorKey = GlobalKey<NavigatorState>();
 
 Future<String> sendnotification(String msg,String title,String tokeen) async {
   var responseData;
-  final String url = "https://localtalk.mobi/communicator/api/notifications/push";
+  final String url = "notifications/push";
+  // final String url = "https://localtalk.mobi/communicator/api/notifications/push";
   final client = new http.Client();
 
 
   final response = await client.post(
-    Uri.parse(url),
+    Uri.parse(Constants.SERVER_URL + url),
     headers: {HttpHeaders.contentTypeHeader: 'application/json'},
     body: json.encode({"pushData":{
       "message" :msg,
@@ -44,10 +45,11 @@ Future<String> sendnotification(String msg,String title,String tokeen) async {
 Future<String> deleteit(String token, messageId) async {
   var responseData;
 log(token);
-  final String url = "https://localtalk.mobi/communicator/api/v1/message/deleteMessageEveryone";
+  final String url = "v1/message/deleteMessageEveryone";
+  // final String url = "https://localtalk.mobi/communicator/api/v1/message/deleteMessageEveryone";
   final client = new http.Client();
   final response = await client.post(
-    Uri.parse(url),
+    Uri.parse(Constants.SERVER_URL + url),
     headers: {
       HttpHeaders.AUTHORIZATION: 'Bearer ' + token
     },
@@ -65,10 +67,11 @@ log(token);
 Future<String> uodatecount(String cid, String count,String token) async {
   var responseData;
   log(token);
-  final String url = "https://localtalk.mobi/communicator/api/v1/conversions/updateChatCount";
+  final String url = "v1/conversions/updateChatCount";
+  // final String url = "https://localtalk.mobi/communicator/api/v1/conversions/updateChatCount";
   final client = new http.Client();
   final response = await client.post(
-    Uri.parse(url),
+    Uri.parse(Constants.SERVER_URL + url),
     headers: {
       HttpHeaders.AUTHORIZATION: 'Bearer ' + token
     },

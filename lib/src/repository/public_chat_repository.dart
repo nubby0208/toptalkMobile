@@ -100,10 +100,11 @@ Future<String> cancelTopUp(String token, messageId, userID) async {
 
 Future<String> deleteit(String token, messageId) async {
   var responseData;
-  final String url = "https://localtalk.mobi/communicator/api/v1/roomMessages/delete";
+  final String url = "v1/roomMessages/delete";
+  // final String url = "https://localtalk.mobi/communicator/api/v1/roomMessages/delete";
   final client = new http.Client();
   final response = await client.post(
-    Uri.parse(url),
+    Uri.parse(Constants.SERVER_URL + url),
     headers: {HttpHeaders.contentTypeHeader: 'application/json',
       HttpHeaders.AUTHORIZATION: 'Bearer ' + token
     },

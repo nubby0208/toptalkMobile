@@ -34,10 +34,11 @@ Future<String> sendPhoneNumber(phoneNumber) async {
 
 Future<String> userLogin(number, password) async {
   var responseData;
-  final String url = "v1/auth/loginV2";
+  final String url = "v1/auth/login";
   final client = new http.Client();
   final response = await client.post(
-    Uri.parse("https://localtalk.mobi/communicator/api/v1/auth/loginV2"),
+    Uri.parse(Constants.SERVER_URL + url),
+    // Uri.parse("https://localtalk.mobi/communicator/api/v1/auth/loginV2"),
     headers: {HttpHeaders.contentTypeHeader: 'application/json'},
     body: json.encode({"number": number, "password": password}),
   );
@@ -77,7 +78,8 @@ Future<String> userRegister(number, password, name, gender,devicetokken) async {
   final String url = "v1/auth/register";
   final client = new http.Client();
   final response = await client.post(
-    Uri.parse("https://localtalk.mobi/communicator/api/v1/auth/register"),
+    Uri.parse(Constants.SERVER_URL + url),
+    // Uri.parse("https://localtalk.mobi/communicator/api/v1/auth/register"),
     headers: {HttpHeaders.contentTypeHeader: 'application/json',
       'utoken' :deviceId
 
@@ -195,7 +197,8 @@ Future<String> getnumbers(int index) async {
   "limit":8, "startIndex":index
   };
   final response = await client.post(
-    Uri.parse("https://localtalk.mobi/communicator/api/v1/numbers"),
+    Uri.parse(Constants.SERVER_URL + url),
+    // Uri.parse("https://localtalk.mobi/communicator/api/v1/numbers"),
     headers: {HttpHeaders.contentTypeHeader: 'application/json',
       'utoken':deviceId
     },
