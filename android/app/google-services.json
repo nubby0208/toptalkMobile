@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "765943309028",
+    "project_id": "localtalk-mobi",
+    "storage_bucket": "localtalk-mobi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765943309028:android:c80b0cb91c9cd8b09d82f1",
+        "android_client_info": {
+          "package_name": "com.locals.locals"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "765943309028-3csrmogvud3tsnebtf2ekuh192bp4jb1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9NWuQuCYEFIbKr8w7OKJgmLWjzgc8fiE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "765943309028-3csrmogvud3tsnebtf2ekuh192bp4jb1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,8 @@
+{
+  "base_url": "http://cleanziy.sfes.sa/",
+  "api_base_url": "https://cleanziy.sfes.sa/api/",
+  "base_url": "http://sfes.sa/admin/public",
+  "api_base_url": "http://sfes.sa/admin/public/api/",
+  "base_url": "http://10.10.11.123/admin/public",
+  "api_base_url": "http://10.10.11.123/admin/public/api/"
+}
